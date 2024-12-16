@@ -84,21 +84,7 @@
     {"tag": "🎯 全球直连", "type": "direct"},
     {"tag": "dns-out", "type": "dns"}
   ],
-  
-  "outbound_providers": [
-    {
-      "type": "remote",
-      "tag": "zj",
-      "path": "./zj.json",
-      "download_url": "http://192.168.2.2:3001/3cV89MMDdgDibfn8rRSp/download/%E8%87%AA%E5%BB%BA",
-      "download_ua": "clash.meta",
-      "enable_healthcheck": true,
-      "healthcheck_url": "https://www.gstatic.com/generate_204",
-      "healthcheck_interval": "86400s",
-      "download_detour": "🎯 全球直连"
-    }
-  ],
-  
+
   "route": {
         "auto_detect_interface": true,
         "final": "🐠 漏网之鱼",
