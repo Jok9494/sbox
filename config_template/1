@@ -1,1 +1,2 @@
 sing-box run -c /etc/sing-box/config.json
+killall sing-box
