@@ -65,9 +65,14 @@
     { "tag": "🐸 手动切换", "type": "selector", "outbounds": ["{all}"]},
     { "tag": "♻️ 自动选择", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "exclude", "keywords": ["网站|地址|剩余|过期|时间|有效"] }], "url": "http://www.gstatic.com/generate_204", "interval": "10m", "tolerance": 50 },
     { "tag": "GLOBAL", "type": "selector", "outbounds": ["{all}"]},
-    { "tag": "🎯 全球直连", "type": "direct" },
-    { "multiplex": "protocol": "h2mux", "max_connections": 4, "min_streams": 4 }
+    { "tag": "🎯 全球直连", "type": "direct" }
   ],
+  
+ "multiplex": {
+        "protocol": "h2mux", // 使用 h2mux 多路复用协议
+        "max_connections": 4, // 最大连接数为 4
+        "min_streams": 4 // 每个连接的最小流数为 4
+      },
   
   "route": 
  {
