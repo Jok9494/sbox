@@ -68,14 +68,6 @@
     { "tag": "🎯 全球直连", "type": "direct" }
   ],
   
- "multiplex": [
-      {
-        "protocol": "h2mux", 
-        "max_connections": 4, 
-        "min_streams": 4 
-      }
-   ],
-  
   "route": 
  {
    "auto_detect_interface": true,
