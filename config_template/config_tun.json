@@ -25,12 +25,13 @@
  {
    "servers": 
    [
-     {"tag": "dns_direct", "address": "180.168.255.18", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🎯 全球直连"},
-     {"tag": "dns_proxy", "address": "tls://1.1.1.1", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🚀 节点选择"}
+     {"tag": "dns_direct", "address": ["https://dns.pub/dns-query", "https://dns.alidns.com/dns-query"], "address_resolver": "dns_resolver", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🎯 全球直连"},
+     {"tag": "dns_proxy", "address": ["https://dns.cloudflare.com/dns-query", "https://dns.google/dns-query"], "address_resolver": "dns_resolver", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🚀 节点选择"},
+	 {"tag": "dns_resolver", "address": "223.5.5.5", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🎯 全球直连"}
    ],
    "rules": 
    [
-     {"outbound": "any", "server": "dns_direct", "disable_cache": true},
+     {"outbound": "any", "server": "dns_resolver", "disable_cache": true},
      {"clash_mode": "Direct", "server": "dns_direct"},
      {"clash_mode": "Global", "server": "dns_proxy"},
      {"rule_set": "geosite-cn", "server": "dns_direct"},
@@ -46,7 +47,6 @@
     "type": "tun",
     "address": [
       "172.19.0.1/30",
-      "fdfe:dcba:9876::1/126"
     ],
     "mtu": 9000,
     "auto_route": true,
