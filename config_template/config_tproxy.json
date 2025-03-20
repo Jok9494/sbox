@@ -25,12 +25,13 @@
  {
    "servers": 
    [
-     {"tag": "dns_direct", "address": "127.0.0.1:5335", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🎯 全球直连"},
-     {"tag": "dns_proxy", "address": "127.0.0.1:5335", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🚀 节点选择"}
+     {"tag": "dns_direct", "address": ["https://dns.pub/dns-query", "https://dns.alidns.com/dns-query"], "address_resolver": "dns_resolver", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🎯 全球直连"},
+     {"tag": "dns_proxy", "address": ["https://dns.cloudflare.com/dns-query", "https://dns.google/dns-query"], "address_resolver": "dns_resolver", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🚀 节点选择"},
+     {"tag": "dns_resolver", "address": ["119.29.29.29", "116.228.111.118"], "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🎯 全球直连"}
    ],
    "rules": 
    [
-     {"outbound": "any", "server": "dns_direct", "disable_cache": true},
+     {"outbound": "any", "server": "dns_resolver", "disable_cache": true},
      {"clash_mode": "Direct", "server": "dns_direct"},
      {"clash_mode": "Global", "server": "dns_proxy"},
      {"rule_set": "geosite-cn", "server": "dns_direct"},
