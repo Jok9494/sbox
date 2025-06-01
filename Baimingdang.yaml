@@ -1,6 +1,6 @@
 payload:
   - DOMAIN-SUFFIX,cfulibl.net
-  - DOMAIN-SUFFIX,pandalive.co.kr
+  #- DOMAIN-SUFFIX,pandalive.co.kr
   #- DOMAIN-SUFFIX,winktv.co.kr
   #- DOMAIN-SUFFIX,sooplive.co.kr
   - DOMAIN-SUFFIX,svipcun.com
