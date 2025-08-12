@@ -1,15 +1,17 @@
 {
   "dns": {
     "servers": [
-      {"tag": "local", "type": "local"}
+      {"tag": "local", "type": "local"},
+      {"tag": "public", "type": "local"},
+      {"tag": "foreign", "type": "local"}	  
     ],
     "rules": [
       {"query_type": "HTTPS", "action": "reject"},
       {"clash_mode": "direct", "server": "local"},
-      {"clash_mode": "global", "server": "local"},
+      {"clash_mode": "global", "server": "foreign"},
       {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-apple"], "server": "local"}
     ],
-    "final": "local",
+    "final": "foreign",
     "strategy": "ipv4_only",
     "independent_cache": true
   },
