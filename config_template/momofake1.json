@@ -1,7 +1,7 @@
 {
   "dns": {
     "servers": [
-      {"tag": "local", "type": "udp", "server": "116.228.111.118"},
+      {"tag": "local", "type": "udp", "server": "114.114.115.115"},
       {"tag": "public", "type": "https", "server": "dns.alidns.com", "domain_resolver": "local"},
       {"tag": "foreign", "type": "https", "server": "1.1.1.1"},
       {"tag": "fakeip", "type": "fakeip", "inet4_range": "198.18.0.0/15", "inet6_range": "fc00::/18"}
