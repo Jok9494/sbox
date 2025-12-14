@@ -9,4 +9,6 @@ payload:
   - DOMAIN-SUFFIX,hebeisaixin.com
   - DOMAIN-SUFFIX,sourcelandchina.com
   #- DOMAIN-SUFFIX,agefans.la
+  - DOMAIN-SUFFIX,icmp9.com
   - DOMAIN-KEYWORD,wogg
+
